@@ -4,7 +4,7 @@ jq(document).ready(function () {
   var split = pathname.split('/');
   var length = split.length;
   var filename = split[length - 1];
-  if(filename == 'dashboard.html') {
+  if(filename == 'index.html') {
   jq('.admin-dashboard-table').empty();
   jq.ajax({
     type: 'GET',
