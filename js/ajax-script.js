@@ -5,15 +5,15 @@ jq(document).ready(function () {
   var length = split.length;
   var filename = split[length - 1];
   if(filename == 'index.html') {
-    alert('data');
+    // alert('data');
   jq('.admin-dashboard-table').empty();
   jq.ajax({
     type: 'GET',
     url: "https://prepaid.mediagroupcenter.fr/services/users.php",
     success: function (data) {
-      alert('success');
+      // alert('success');
     if(data) {
-      alert('data');
+      // alert('data');
       var parsedData = JSON.parse(data);
     frameDashboard = '<table class="table"><tr><th>Id</th><th>Full Name</th><th>Gender</th><th>Address</th><th>City</th><th>State</th><th>Phone</th><th>Email</th><th>Date Of Birth</th><th>Edit</th><th>Delete</th></tr>';
     jq(parsedData).each(function (idx, obj) {
@@ -26,7 +26,7 @@ jq(document).ready(function () {
   }
     },
     error: function (data) {
-      alert('error');
+      alert(JSON.stringify(data));
       console.log(data, 'error');
     }
   });
