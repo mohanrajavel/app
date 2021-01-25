@@ -4,11 +4,12 @@ jq(document).ready(function () {
   var split = pathname.split('/');
   var length = split.length;
   var filename = split[length - 1];
-  if(filename == 'dashboard.html') {
+  if(filename == 'index.html') {
   jq('.admin-dashboard-table').empty();
   jq.ajax({
     type: 'GET',
     url: "https://prepaid.mediagroupcenter.fr/services/users.php",
+    dataType: "jsonp",
     success: function (data) {
     if(data) {
       var parsedData = JSON.parse(data);
@@ -23,6 +24,7 @@ jq(document).ready(function () {
   }
     },
     error: function (data) {
+    alert(JSON.stringify(data))
       console.log(data, 'error');
     }
   });
