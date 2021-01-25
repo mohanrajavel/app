@@ -76,8 +76,8 @@
     <engine name="ios" spec="^4.5.3" />
     <plugin name="cordova-plugin-battery-status" spec="^1.2.5" />
 	<plugin spec="https://github.com/dpa99c/cordova-android-support-gradle-release" source="git" >
-	<variable name="ANDROID_SUPPORT_VERSION" value="28.0.0"/>
 	</plugin>
+
 	<!-- 
     <plugin name="cordova-plugin-ble-central" spec="^1.1.4">
         <variable name="BLUETOOTH_USAGE_DESCRIPTION" value="Bluetooth development purposes" />
